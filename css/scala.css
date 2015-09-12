@@ -1,0 +1,9 @@
+.title-img {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.reveal pre {
+    box-shadow: none !important;
+}
