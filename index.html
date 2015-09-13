@@ -202,6 +202,159 @@ if (expression) {
 						<h1>Demo</h1>
 					</section>
 				</section>
+
+				<!-- Methods & Functions -->
+				<section data-background="#E31937">
+					<section>
+						<h2>Methods & Functions</h2>
+						<p>Functions are values; methods are not.</p>
+					</section>
+					<section>
+						<h2>Methods</h2>
+						<p>Evaluated, every time, on call.</p>
+						<pre>
+							<code data-trim contenteditable>
+def name(arg1: Type1, arg2: Type2): ReturnType = {
+  /* ... */
+}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h2>Functions</h2>
+						<p>Evaluated on initialization.</p>
+						<p><strong>lazy val</strong> will evaluate on first call; only once.</p>
+						<pre>
+							<code data-trim contenteditable>
+(n: Int) => { /* ... */ }
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h1>Demo</h1>
+					</section>
+				</section>
+
+				<!-- Classes -->
+				<section data-background="#E31937">
+					<section>
+						<h2>Classes</h2>
+						<pre>
+							<code data-trim contenteditable>
+class MyClass
+val o = new MyClass
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h2>Fields</h2>
+						<pre>
+							<code data-trim contenteditable>
+class Company(var name: String)
+class Company(val name: String)
+class Company(name: String)
+class Company(private var name: String)
+class Company(private val name: String)
+class Company { val name = "CGI" }
+							</code>
+						</pre>
+						<table>
+							<thead>
+								<tr>
+									<th>Visibility</th>
+									<th>Accessor / getter</th>
+									<th>Mutator / setter</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>var</td>
+									<td>Yes</td>
+									<td>Yes</td>
+								</tr>
+								<tr>
+									<td>var</td>
+									<td>Yes</td>
+									<td>No</td>
+								</tr>
+								<tr>
+									<td>Default</td>
+									<td>No</td>
+									<td>No</td>
+								</tr>
+								<tr>
+									<td>private</td>
+									<td>No</td>
+									<td>No</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+					<section>
+						<h2>placeholder</h2>
+						<p>more coming</p>
+					</section>
+					<section>
+						<h1>Demo</h1>
+					</section>
+				</section>
+
+				<!-- Packages -->
+				<section data-background="#E31937">
+					<h2>Packages</h2>
+					<pre>
+						<code data-trim contenteditable>
+// More than one within same statement
+import util.Random, util.Properties
+// Combining multiple classes in single statement
+import util.{Random, Properties}
+// Change name
+import util.{ Random => HelterSkelter }
+// Everything
+import util._
+						</code>
+					</pre>
+				</section>
+
+				<!-- Loops -->
+				<section data-background="#E31937">
+					<section>
+						<h2>Loops</h2>
+					</section>
+					<section>
+						<h2>For loops</h2>
+						<pre>
+							<code data-trim contenteditable>
+for (var <- list) statement
+for (var <- range) statement
+for (var <- [range/list] if condition1; if condition2; ...) statement
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h2>While loops</h2>
+						<pre>
+							<code data-trim contenteditable>
+while (condition) {
+  /* ... */
+}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h2>Do While loop</h2>
+						<pre>
+							<code data-trim contenteditable>
+do {
+  /* ... */
+} while (condition)
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h1>Demo</h1>
+					</section>
+				</section>
 			</div>
 		</div>
 
