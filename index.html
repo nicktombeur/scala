@@ -34,7 +34,7 @@
 			<div class="slides">
 				<!-- Title -->
 				<section data-background="#A1C4D0">
-					<img data-src="assets/smooth-spiral.png" class="title-img" />
+					<img data-src="assets/smooth-spiral.png" class="simple-img" />
 					<h1>Scala</h1>
 					<p>
 						Nick Tombeur - <a href="http://www.jobsatcgi.be/">CGI Belgium</a>
@@ -291,6 +291,33 @@ class Company { val name = "CGI" }
 						</table>
 					</section>
 					<section>
+						<h2>Named & default arguments</h2>
+						<pre>
+							<code data-trim contenteditable>
+// Named arguments
+class Company(name: String, country: String)
+new Company(name = "CGI", country = "Belgium")
+
+// Default arguments
+class Company(name: String = "CGI", country: String = "Belgium")
+new Company("Telenet")
+new Company(country = "Canada")
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h2>Overloading</h2>
+						<pre>
+							<code data-trim contenteditable>
+class Foo {
+  def bar() = /* ... */
+  def bar(n: Int) = /* ... */
+}
+							</code>
+						</pre>
+						<p>Note: overloading doesn't work in the REPL. Use REPL's :paste mode</p>
+					</section>
+					<section>
 						<h2>placeholder</h2>
 						<p>more coming</p>
 					</section>
@@ -353,6 +380,92 @@ do {
 					</section>
 					<section>
 						<h1>Demo</h1>
+					</section>
+				</section>
+
+				<!-- Collections -->
+				<section data-background="#E31937">
+					<section>
+						<h2>Collections</h2>
+					</section>
+					<section>
+						<h3>scala.collection</h3>
+						<p>High-level abstract classes/traits</p>
+						<img data-src="assets/collections.png" class="simple-img" />
+					</section>
+					<section>
+						<h3>scala.collection.immutable</h3>
+						<img data-src="assets/collections.immutable.png" class="simple-img" />
+					</section>
+					<section>
+						<h3>scala.collection.mutable</h3>
+						<img data-src="assets/collections.mutable.png" class="simple-img" />
+					</section>
+					<section>
+						<h3>Best practice immutable/mutable</h3>
+						<ul>
+							<li>Prefer immutable</li>
+							<li>Use the mutable namespace explicitly</li>
+						</ul>
+						<pre>
+							<code data-trim contenteditable>
+// Do
+import scala.collection.mutable
+val set = mutable.Set()
+
+// Don't
+import scala.collection.mutable._
+val set = Set()
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h3>Common used</h3>
+						<table>
+							<thead>
+								<tr>
+									<th>Type</th>
+									<th>Description</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Map</td>
+									<td>key-value</td>
+								</tr>
+								<tr>
+									<td>Set</td>
+									<td>no duplicate elements</td>
+								</tr>
+								<tr>
+									<td>List/Seq</td>
+									<td>store elements and traverse them</td>
+								</tr>
+								<tr>
+									<td>Vector/IndexedSeq</td>
+									<td>fast random selections and fast random functional updates</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+					<section>
+						<h1>Demo</h1>
+					</section>
+				</section>
+
+				<!-- Pattern Matching -->
+				<section data-background="#E31937">
+					<section>
+						<h2>Pattern Matching</h2>
+						<pre>
+							<code data-trim contenteditable>
+x match {
+  case 1 => "one"
+  case 2 => "two"
+  case _ => "many"
+}
+							</code>
+						</pre>
 					</section>
 				</section>
 			</div>
