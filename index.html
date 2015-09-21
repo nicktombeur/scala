@@ -318,6 +318,36 @@ class Foo {
 						<p>Note: overloading doesn't work in the REPL. Use REPL's :paste mode</p>
 					</section>
 					<section>
+						<h2>Constructors</h2>
+						<pre>
+							<code data-trim contenteditable>
+class Foo() {
+  println("Called on creation")
+}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h2>Auxiliary constructors</h2>
+						<pre>
+							<code data-trim contenteditable>
+class Point(x: Int, y: Int) {
+  def this(x: Int) {
+    this(x, 0)
+  }
+}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h2>Case classes</h2>
+						<pre>
+							<code data-trim contenteditable>
+								case class Name(arg1: Type, arg2: Type, ...)
+							</code>
+						</pre>
+					</section>
+					<section>
 						<h2>placeholder</h2>
 						<p>more coming</p>
 					</section>
@@ -467,6 +497,20 @@ x match {
 							</code>
 						</pre>
 					</section>
+				</section>
+
+				<!-- String interpolation -->
+				<section data-background="#E31937">
+					<h2>String interpolation</h2>
+					<pre>
+						<code data-trim contenteditable>
+val company = "CGI"
+println(s"I am working for $company")
+
+def foo = { 1 + 1 }
+s"${foo}"
+						</code>
+					</pre>
 				</section>
 			</div>
 		</div>
