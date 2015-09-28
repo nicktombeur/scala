@@ -348,6 +348,15 @@ class Point(x: Int, y: Int) {
 						</pre>
 					</section>
 					<section>
+						<h2>Companion Objects</h2>
+						<pre>
+							<code data-trim contenteditable>
+class Company() { /* ... */ }
+object Company() { /* ... */ }
+							</code>
+						</pre>
+					</section>
+					<section>
 						<h2>placeholder</h2>
 						<p>more coming</p>
 					</section>
@@ -497,6 +506,31 @@ x match {
 							</code>
 						</pre>
 					</section>
+					<section>
+						<h2>With types</h2>
+						<pre>
+							<code data-trim contenteditable>
+x match {
+  case s: String => "A String"
+  case i: Int if i < 10 => "An Int less than 10"
+  case i: Int => "An Int"
+  case c: Company => "A company"
+}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h2>With Case Classes</h2>
+						<pre>
+							<code data-trim contenteditable>
+transport match {
+  case Car(passengers, seats) => /* ... */
+  case Bicycle(passengers, seats) => /* ... */
+  case Passenger => /* ... */
+}
+							</code>
+						</pre>
+					</section>
 				</section>
 
 				<!-- String interpolation -->
@@ -509,6 +543,22 @@ println(s"I am working for $company")
 
 def foo = { 1 + 1 }
 s"${foo}"
+						</code>
+					</pre>
+				</section>
+
+				<!-- Tuples -->
+				<section data-background="#E31937">
+					<h2>Tuples</h2>
+					<pre>
+						<code data-trim contenteditable>
+(element1, element2, element3, ...)
+
+val p = (1831, "Diegem")
+p._1
+p._2
+
+val (postal, city) = p
 						</code>
 					</pre>
 				</section>
