@@ -42,7 +42,7 @@
 				</section>
 
 				<!-- Why Scala ?-->
-				<section data-background="#E31937" data-background-transition="zoom">
+				<section data-background-transition="zoom">
 					<section>
 						<h2>Why Scala?</h2>
 					</section>
@@ -66,7 +66,7 @@
 				<section data-background="assets/lets-get-started.jpg" data-background-size="65%"></section>
 
 				<!-- Values -->
-				<section data-background="#E31937">
+				<section>
 					<section>
 						<h2>Data types</h2>
 					</section>
@@ -166,7 +166,7 @@ var name: Type = initialization
 				</section>
 
 				<!-- Conditional expressions -->
-				<section data-background="#E31937">
+				<section>
 					<section>
 						<h2>Conditional expressions</h2>
 						<p>The entire <strong>if</strong> itself is an expression. Which means it produces a result.</p>
@@ -188,7 +188,7 @@ if (expression) {
 				</section>
 
 				<!-- Compound Expressions -->
-				<section data-background="#E31937">
+				<section>
 					<section>
 						<h2>Compound Expressions</h2>
 						<p>A compound expression can contain any number of other expressions, including other curly-braced expressions</p>
@@ -204,7 +204,7 @@ if (expression) {
 				</section>
 
 				<!-- Methods & Functions -->
-				<section data-background="#E31937">
+				<section>
 					<section>
 						<h2>Methods & Functions</h2>
 						<p>Functions are values; methods are not.</p>
@@ -236,7 +236,7 @@ def name(arg1: Type1, arg2: Type2): ReturnType = {
 				</section>
 
 				<!-- Classes -->
-				<section data-background="#E31937">
+				<section>
 					<section>
 						<h2>Classes</h2>
 						<pre>
@@ -273,7 +273,7 @@ class Company { val name = "CGI" }
 									<td>Yes</td>
 								</tr>
 								<tr>
-									<td>var</td>
+									<td>val</td>
 									<td>Yes</td>
 									<td>No</td>
 								</tr>
@@ -366,7 +366,7 @@ object Company() { /* ... */ }
 				</section>
 
 				<!-- Packages -->
-				<section data-background="#E31937">
+				<section>
 					<h2>Packages</h2>
 					<pre>
 						<code data-trim contenteditable>
@@ -383,7 +383,7 @@ import util._
 				</section>
 
 				<!-- Loops -->
-				<section data-background="#E31937">
+				<section>
 					<section>
 						<h2>Loops</h2>
 					</section>
@@ -423,7 +423,7 @@ do {
 				</section>
 
 				<!-- Collections -->
-				<section data-background="#E31937">
+				<section>
 					<section>
 						<h2>Collections</h2>
 					</section>
@@ -493,7 +493,7 @@ val set = Set()
 				</section>
 
 				<!-- Pattern Matching -->
-				<section data-background="#E31937">
+				<section>
 					<section>
 						<h2>Pattern Matching</h2>
 						<pre>
@@ -534,7 +534,7 @@ transport match {
 				</section>
 
 				<!-- String interpolation -->
-				<section data-background="#E31937">
+				<section>
 					<h2>String interpolation</h2>
 					<pre>
 						<code data-trim contenteditable>
@@ -548,7 +548,7 @@ s"${foo}"
 				</section>
 
 				<!-- Tuples -->
-				<section data-background="#E31937">
+				<section>
 					<h2>Tuples</h2>
 					<pre>
 						<code data-trim contenteditable>
@@ -559,6 +559,58 @@ p._1
 p._2
 
 val (postal, city) = p
+						</code>
+					</pre>
+				</section>
+
+				<!-- Inheritance -->
+				<section>
+                    <section>
+                        <h2>Inheritance</h2>
+                    <pre>
+                        <code data-trim contenteditable>
+class Animal
+class Bird extends Animal
+class Ape extends Animal
+                        </code>
+                    </pre>
+                    </section>
+                    <section>
+                        <h2>Superclass Initialization</h2>
+                        <pre>
+                            <code data-trim contenteditable>
+class Animal(val age: Int)
+class Bird(age: Int) extends Animal(age)
+class Ape(age: Int, val weight: Double) extends Animal(age)
+                            </code>
+                        </pre>
+                    </section>
+					<section>
+						<h2>Overriding</h2>
+						<pre>
+							<code data-trim contenteditable>
+class Bar {
+  def run = 2
+}
+
+class Foo extends Bar {
+  override def toString = "Hello World!"
+  override def run = super.run * 2
+}
+							</code>
+						</pre>
+					</section>
+				</section>
+
+				<!-- Enumerations -->
+				<section>
+					<h2>Enumerations</h2>
+					<pre>
+						<code data-trim contenteditable>
+object WeekDay extends Enumeration {
+  type WeekDay = Value
+  val Mon, Tue, Wed, Thu, Fri, Sat, Sun = Value
+}
 						</code>
 					</pre>
 				</section>
